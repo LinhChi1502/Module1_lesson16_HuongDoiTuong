@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (celsius) {
+        this.toFaraheit = function () {
+            return 9 / 5 * celsius + 32;
+        }
+        this.toKenvil = function () {
+            return celsius + 273.15;
+        }
+    }
+    let newCelsius = new Temperature(15);
+    document.write("Do F la " + newCelsius.toFaraheit() + "<br>");
+    document.write("Do K la " + newCelsius.toKenvil());
+</script>
+</body>
+</html>

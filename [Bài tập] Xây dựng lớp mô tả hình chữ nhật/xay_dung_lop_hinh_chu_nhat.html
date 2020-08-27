@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng hình chữ nhật</title>
+</head>
+<body>
+<!--<canvas id="myCanvas" width="1000px" height="500px"></canvas>-->
+<script>
+    function Rectangle(leng, wid) {
+        this.leng = parseInt(leng);
+        this.wid = parseInt(wid);
+        this.calArea = function () {
+            return leng * wid;
+        }
+        this.calDiameter = function () {
+            return (leng + wid) * 2;
+        }
+    }
+    // function createRectangle() {
+    //     let ctx = document.getElementById("myCanvas").getContext("2d");
+    //     let x = Math.floor(Math.random()*window.innerWidth);
+    //     let y = Math.floor(Math.random()*window.innerHeight);
+    //     let length = Math.floor(Math.random()*1000);
+    //     let width = Math.floor(Math.random()*500);
+    //     let rectangle = new Rectangle(length,width);
+    //     ctx.beginPath();
+    //     ctx.rect(x,y,rectangle.length,rectangle.width);
+    //     ctx.fill();
+    // }
+    // createRectangle();
+
+let newRectangle = new Rectangle(200,100);
+document.write("Dien tich la: " + newRectangle.calArea()+"<br>");
+document.write("Chu vi la: " +newRectangle.calDiameter());
+</script>
+</body>
+</html>
