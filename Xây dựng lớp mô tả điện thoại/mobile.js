@@ -44,6 +44,7 @@ document.getElementById("onOffnokia").innerHTML = nokia.status ? "On" : "Off";
 document.getElementById("iphoneFunction").style.display = "none";
 document.getElementById("nameiphone").innerHTML = iphone.name;
 document.getElementById("batteryiphone").innerHTML = iphone.battery + "%";
+
 document.getElementById("onOffiphone").innerHTML = iphone.status ? "On" : "Off";
 
 function changeStatus(mobile) {
@@ -55,7 +56,7 @@ function changeStatus(mobile) {
     if (!mobile.status) {
         document.getElementById(id).style.display = "none";
     }
-    document.getElementById("'"+"onOff"+mobile.id+"'").innerHTML = mobile.status ? "On" : "Off";
+    document.getElementById(""+"onOff"+mobile.id+"").innerHTML = mobile.status ? "On" : "Off";
 }
 
 function chargeBattery(mobile) {
