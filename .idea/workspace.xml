@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21608a2e-b9bc-4416-97a6-2dd54cdddd45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/gameCar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/car_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/chiKieuAnh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/down.png" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/down.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/up.png" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/up.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +54,7 @@
       <workItem from="1598500043552" duration="15627000" />
       <workItem from="1598531585077" duration="216000" />
       <workItem from="1598531804683" duration="9071000" />
-      <workItem from="1598575553964" duration="26216000" />
+      <workItem from="1598575553964" duration="27185000" />
     </task>
     <servers />
   </component>
