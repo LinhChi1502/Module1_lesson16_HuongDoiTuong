@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            width: 10%;
+        }
+    </style>
+</head>
+<body onkeydown="car.driveCar(event)" scroll="no" style="overflow: hidden">
+<h1 style="border: 1px solid black">points: <span id="point">0</span></h1>
+<img src="" alt="" id="obstacle" hidden>
+<img src="" alt="" id="gift" hidden>
+<img src="" alt="" id="demo1" hidden>
+<canvas id="myCanvas" width="800px" height="800px" style="border: 1px solid black"></canvas>
+<script>
+    let obstacles = [];
+    let gifts = [];
+
+    // tao vat can
+    function Obstacle(width, height, xpos, ypos) {
+        this.width = width;
+        this.height = height;
+        this.xpos = xpos;
+        this.ypos = ypos;
+
+        this.drawObstacle = function (image) {
+            let e = document.getElementById("obstacle");
+            e.setAttribute("src", image);
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.drawImage(e, this.xpos, this.ypos, this.width, this.height);
+        }
+    }
+
+    function createMultiObstacle() {
+        for (let i = 0; i < 3; i++) {
+            let xpos = Math.floor(Math.random() * 500 + 100);
+            let ypos = Math.floor(Math.random() * 300 + 50);
+            let obstacle = new Obstacle(50, 50, xpos, ypos);
+            obstacle.drawObstacle("vatcan.jpg");
+            obstacles.push(obstacle);
+        }
+    }
+
+    function drawMultiObstacle() {
+        for (let i = 0; i < obstacles.length; i++) {
+            obstacles[i].drawObstacle("vatcan.jpg")
+        }
+    }
+
+    window.onload = createMultiObstacle();
+
+    // tao phan thuong
+    function Gift(width, height, xpos, ypos) {
+        this.width = width;
+        this.height = height;
+        this.xpos = xpos;
+        this.ypos = ypos;
+
+        this.drawGift = function (image) {
+            let e = document.getElementById("gift");
+            e.setAttribute("src", image);
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.drawImage(e, this.xpos, this.ypos, this.width, this.height);
+        }
+    }
+
+    function createMultiGift() {
+        for (let i = 0; i < 3; i++) {
+            let xpos = Math.floor(Math.random() * 500 + 100);
+            let ypos = Math.floor(Math.random() * 300 + 50);
+            let gift = new Gift(50, 50, xpos, ypos);
+            gift.drawGift("gift.jpg");
+            gifts.push(gift);
+        }
+    }
+
+    function drawMultiGift() {
+        for (let i = 0; i < gifts.length; i++) {
+            gifts[i].drawGift("gift.jpg")
+        }
+    }
+
+    window.onload = createMultiGift();
+    let points = 0;
+    function Car(width, height, xpos, ypos, speed) {
+        this.width = width;
+        this.height = height;
+        this.xpos = xpos;
+        this.ypos = ypos;
+        this.speed = speed;
+        this.image = "up.png";
+        this.ctx = undefined;
+        this.drawCar = function (ctx) {
+            let e = document.getElementById("demo1");
+            e.setAttribute("src", this.image);
+            ctx.drawImage(e, this.xpos, this.ypos, this.width, this.height);
+        }
+        this.start = function () {
+            this.ctx = document.getElementById("myCanvas").getContext("2d");
+            this.drawCar(this.ctx);
+        }
+        this.render = function () {
+            this.ctx.clearRect(0, 0, 800, 800);
+            this.drawCar(this.ctx);
+            drawMultiObstacle();
+            drawMultiGift();
+        }
+
+        this.driveCar = function (event) {
+            switch (event.which) {
+                case 37:
+                    this.image = "left.png";
+                    this.xpos -= this.speed;
+                    break;
+                case 38:
+                    this.image = "up.png";
+                    this.ypos -= this.speed;
+                    break;
+                case 39:
+                    this.image = "right.png";
+                    this.xpos += this.speed;
+                    break;
+                case 40:
+                    this.image = "down.png";
+                    this.ypos += this.speed;
+                    break;
+                case 17:
+                    this.speed *= 5;
+                    break;
+            }
+            this.render();
+            crashObstacle();
+            if (crashGift()) {
+                points += 1;
+                document.getElementById("point").innerHTML = points;
+                this.render();
+            }
+        }
+    }
+
+    let car = new Car(50, 50, 80, 80, 5);
+    car.start();
+
+    function crashObstacle() {
+        for (let i = 0; i < obstacles.length; i++) {
+            if ((car.ypos) >= (obstacles[i].ypos - obstacles[i].height / 2) && (car.ypos) <= (obstacles[i].ypos + obstacles[i].height / 2)) {
+                if ((obstacles[i].xpos - obstacles[i].width / 2 <= car.xpos) && (car.xpos <= obstacles[i].xpos + obstacles[i].width / 2)) {
+                    alert("game over");
+                }
+            }
+        }
+    }
+
+    function crashGift() {
+        for (let i = 0; i < gifts.length; i++) {
+            if ((car.ypos) >= (gifts[i].ypos - gifts[i].height / 2) && (car.ypos) <= (gifts[i].ypos + gifts[i].height / 2)) {
+                if ((gifts[i].xpos - gifts[i].width / 2 <= car.xpos) && (car.xpos <= gifts[i].xpos + gifts[i].width / 2)) {
+                    gifts.splice(i,1);
+                    return true;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21608a2e-b9bc-4416-97a6-2dd54cdddd45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/gameCar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Xây dựng lớp mô tả điện thoại/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Xây dựng lớp mô tả điện thoại/mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/car_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/car_game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/car_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/chiKieuAnh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/down.png" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/up.png" beforeDir="false" afterPath="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe/up.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +36,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/[Bài tập] Phát triển game lái xe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\WebstormProjects\Module1_lesson16\[Bài tập] Phát triển game lái xe" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -51,6 +59,8 @@
       <workItem from="1598489503353" duration="9796000" />
       <workItem from="1598500043552" duration="15627000" />
       <workItem from="1598531585077" duration="216000" />
+      <workItem from="1598531804683" duration="9071000" />
+      <workItem from="1598575553964" duration="26216000" />
     </task>
     <servers />
   </component>
@@ -58,10 +68,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598531801423">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598576308542">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598531801423" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598576308542" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1598513237654">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
